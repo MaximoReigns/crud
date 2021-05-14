@@ -71,6 +71,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <a class="btn btn-success" href="get-all-employee"><i class="fa fa-download"></i> Descargar en PDF</a>
                 </div>
             </div>
         </div>

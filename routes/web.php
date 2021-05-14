@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
 
-Route::get('/', [UserController::class,'index']);
+Route::get('/', [UserController::class, 'index']);
 Route::post('users', [UserController::class, 'store'])->name('users.store');
-Route::delete('users/{user}', [UserController::class,'destroy'])->name('users.destroy');
+Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+Route::get('/users', [EmpController::class, 'getAllEmployees']);
+
+Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);
